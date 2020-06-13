@@ -9,7 +9,7 @@
    \/__/    \/_/\/__/   \/___/
 
 
-VIVO tenderfoot theme: screen styles
+VIVO theme-upr theme: screen styles
 
 *****************************************
 *****************************************/
@@ -19,7 +19,7 @@ VIVO tenderfoot theme: screen styles
 @import url("../bootstrap/css/bootstrap.min.css");
 @import url("../bootstrap/css/bootstrap-theme.min.css");
 @import url("reset.css");
-@import url("tenderfoot.css");
+@import url("theme-upr.css");
 @import url("edit.css");
 @import url("navbar-breakpoint.css");
 @import url("page-admin.css");
@@ -31,5 +31,5 @@ VIVO tenderfoot theme: screen styles
 @import url("page-login.css");
 @import url("page-menu.css");
 @import url("page-createAndLink.css");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+/* @import url("https://fonts.googleapis.com/css?family=Noto+Sans"); */
 @import url("../../../local/css/local.css");

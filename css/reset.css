@@ -51,10 +51,17 @@ td {
     margin: 0;
     padding: 0;
     border: 0;
-    font-weight: inherit;
-    font-style: inherit;
+    /* font-weight: inherit;
+    font-style: inherit; */
     font-size: 100%;
-    font-family: "Noto Sans", "Lucida Sans Unicode","Lucida Grande", Geneva, helvetica, sans-serif;
+    /* font-family: "Noto Sans", "Lucida Sans Unicode","Lucida Grande", Geneva, helvetica, sans-serif; */
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'),
+    url('../fonts/MyriadPro-Regular.woff') format('woff'),
+    url('../fonts/MyriadPro-Regular.otf') format('otf');
+
     vertical-align: baseline;
     color: #595b5b;
     font-weight: normal;
