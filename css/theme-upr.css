@@ -178,16 +178,21 @@ ul#header-nav a.log-out {
     padding-left: 10px;
 }
 /* SEARCH ------>  */
-#search {
+form#search-form{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+/* #search {
     width: 396px;
     height: 38px;
     right: 10px;
     padding-top: 5px;
 }
 #search-field {
-    /*width: 396px;
+    width: 396px;
     height: 38px;
-    background: rgb(5, 83, 43);url(../images/search-interior-pages.png) 0 0 no-repeat;*/
+    background: rgb(5, 83, 43);url(../images/search-interior-pages.png) 0 0 no-repeat;
 }
 #search-field input.search {
     text-decoration: none;
@@ -209,10 +214,12 @@ input.search-vivo {
     margin-left: 10px;
     margin-top: 5px;
     padding: 0;
-}
+} */
 #search-form-modifier {
     display: none;
 }
+
+
 /* FOOTER------>  */
 footer {
     height: 88px;

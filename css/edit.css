@@ -12,7 +12,7 @@ input[type="password"] {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    margin-bottom: .8em;
+    /* margin-bottom: .8em; */
 }
 input.block {
     margin-bottom: 20px;

@@ -6,12 +6,11 @@
     <fieldset>
         <legend>${i18n().search_form}</legend>
 
-        <form id="search-form" action="${urls.search}" name="search" role="search" accept-charset="UTF-8" method="POST">
-            <div id="search-field">
-                <input type="text" name="querytext" class="search-vivo" value="${querytext!}" autocapitalize="off" />
-                <input type="submit" class="btn btn-success" value="${i18n().search_button}" class="search">
-            </div>
+        <form id="search-form" class="form-inline my-2 my-lg-0" action="${urls.search}" name="search" role="search" accept-charset="UTF-8" method="POST">
+            <#--  <div id="search-field">  -->
+                <input type="text" name="querytext" class="search-vivo form-control mr-sm-2" value="${querytext!}" autocapitalize="off" />
+                <input type="submit" value="${i18n().search_button}" class="search btn btn-outline-success my-2 my-sm-0">
+            <#--  </div>  -->
         </form>
     </fieldset>
 </section>
-
