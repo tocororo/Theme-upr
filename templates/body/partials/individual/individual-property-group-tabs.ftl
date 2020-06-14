@@ -21,15 +21,15 @@
 					<#assign groupNameHtmlId = "${i18n().properties}" >
 				</#if>
 				<#if tabCount = 1 >
-                    <li data-toggle="tab" groupName="${groupNameHtmlId?replace("/","-")}" class="active" href="#${groupNameHtmlId?replace("/","-")}Group"><a href="#">${groupName?capitalize}</a></li>
+                    <li data-toggle="tab" groupName="${groupNameHtmlId?replace("/","-")}" class="nav-link active" href="#${groupNameHtmlId?replace("/","-")}Group"><a href="#">${groupName?capitalize}</a></li>
 					<#assign tabCount = 2>
 				<#else>
-                    <li data-toggle="tab" groupName="${groupNameHtmlId?replace("/","-")}" href="#${groupNameHtmlId?replace("/","-")}Group"><a href="#">${groupName?capitalize}</a></li>
+                    <li data-toggle="tab" groupName="${groupNameHtmlId?replace("/","-")}" class="nav-link" href="#${groupNameHtmlId?replace("/","-")}Group"><a href="#">${groupName?capitalize}</a></li>
 				</#if>
 			</#if>
 		</#list>
 		<#if (propertyGroups.all?size > 1) >
-            <li id="viewAllTab" data-toggle="tab" groupName="viewAll" href="#viewAll"><a href="#">${i18n().view_all_capitalized}</a></li>
+            <li id="viewAllTab" data-toggle="tab" groupName="viewAll" class="nav-link" href="#viewAll"><a href="#">${i18n().view_all_capitalized}</a></li>
 		</#if>
         </ul>
     </div>

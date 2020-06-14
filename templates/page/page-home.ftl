@@ -70,8 +70,8 @@
                 <div class="col-md-12">
                     <div class="container">
                         <div class="jumbotron">
-                            <p>${i18n().intro_para1}</p>
-                            <p>${i18n().intro_para2}</p>
+                            <h1 class="display-4">${i18n().intro_para1}</h1>
+                            <h1 class="display-4">${i18n().intro_para2}</h1>
                         </div>
                     </div>
                 </div>

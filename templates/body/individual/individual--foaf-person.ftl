@@ -32,75 +32,86 @@
 	</div>
 </section>
 
-<section id="individual-intro" class="vcard person" role="region"><span itemscope itemtype="http://schema.org/Person">
-	<div class="row row-eq-height">
-		<div class="col-md-2 photo-wrapper">
-			<!-- Image -->
-		<#assign individualImage>
-			<@p.image individual=individual
-			propertyGroups=propertyGroups
-			namespaces=namespaces
-			editable=editable
-			showPlaceholder="always" />
-		</#assign>
-		<#if ( individualImage?contains('<img class="individual-photo"') )>
-			<#assign infoClass = 'class="withThumb"'/>
-		</#if>
+<section id="individual-intro" class="vcard person row" role="region">
+	<span class="col-md-9" itemscope itemtype="http://schema.org/Person">
+		<div class="row row-eq-height">
+			<div class="col-md-2 photo-wrapper">
+				<!-- Image -->
+			<#assign individualImage>
+				<@p.image individual=individual
+				propertyGroups=propertyGroups
+				namespaces=namespaces
+				editable=editable
+				showPlaceholder="always" />
+			</#assign>
+			<#if ( individualImage?contains('<img class="individual-photo"') )>
+				<#assign infoClass = 'class="withThumb"'/>
+			</#if>
 
-            <!-- div id="photo-wrapper">${individualImage}</div -->
-		${individualImage}
-		</div>
-		<div class="col-xs-10 person-details">
-			<div class="row title">
-				<div class="col-md-12">
-					<span id="iconControlsRightSide">
-						<img id="uriIcon" title="${individual.uri}" src="${urls.images}/individual/uriIcon.gif" alt="${i18n().uri_icon}"/>
-						<#if checkNamesResult?has_content >
-							<img id="qrIcon"  src="${urls.images}/individual/qr_icon.png" alt="${i18n().qr_icon}" />
-								<span id="qrCodeImage" class="hidden">${qrCodeLinkedImage!}
-									<a class="qrCloseLink" href="#"  title="${i18n().qr_code}">${i18n().close_capitalized}</a>
-								</span>
-						</#if>
-					</span>
-					<section class="vcard person">
-						<h1 class="foaf-person">
-							<#-- Label -->
-								<span itemprop="name" class="fn"><@p.label individual editable labelCount localesCount/></span>
-						</h1>
-						<section id="preferredTitle">
-							<#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
-							<#assign title = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028","http://www.w3.org/2006/vcard/ns#Title")!>
-							<#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-								<#if (title.statements?size < 1) >
-									<@p.addLinkWithLabel title editable />
-								<#elseif editable>
-									<h2>${title.name?capitalize!}</h2>
-									<@p.verboseDisplay title />
+				<!-- div id="photo-wrapper">${individualImage}</div -->
+			${individualImage}
+			</div>
+			<div class="col-xs-10 person-details">
+				<div class="row title">
+					<div class="col-md-12">
+						<span id="iconControlsRightSide">
+							<img id="uriIcon" title="${individual.uri}" src="${urls.images}/individual/uriIcon.gif" alt="${i18n().uri_icon}"/>
+							<#if checkNamesResult?has_content >
+								<img id="qrIcon"  src="${urls.images}/individual/qr_icon.png" alt="${i18n().qr_icon}" />
+									<span id="qrCodeImage" class="hidden">${qrCodeLinkedImage!}
+										<a class="qrCloseLink" href="#"  title="${i18n().qr_code}">${i18n().close_capitalized}</a>
+									</span>
+							</#if>
+						</span>
+						<section class="vcard person">
+							<h1 class="foaf-person">
+								<#-- Label -->
+									<span itemprop="name" class="fn"><@p.label individual editable labelCount localesCount/></span>
+							</h1>
+							<section id="preferredTitle">
+								<#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
+								<#assign title = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028","http://www.w3.org/2006/vcard/ns#Title")!>
+								<#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+									<#if (title.statements?size < 1) >
+										<@p.addLinkWithLabel title editable />
+									<#elseif editable>
+										<h2>${title.name?capitalize!}</h2>
+										<@p.verboseDisplay title />
+									</#if>
+									<#list title.statements as statement>
+										<span itemprop="jobTitle" class="display-title<#if editable>-editable</#if>">${statement.preferredTitle}</span>
+										<@p.editingLinks "${title.localName}" "${title.name}" statement editable title.rangeUri />
+									</#list>
 								</#if>
-								<#list title.statements as statement>
-									<span itemprop="jobTitle" class="display-title<#if editable>-editable</#if>">${statement.preferredTitle}</span>
-									<@p.editingLinks "${title.localName}" "${title.name}" statement editable title.rangeUri />
-								</#list>
-							</#if>
-							<#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
-							<#if ! (title.statements)?has_content>
-								<@p.mostSpecificTypes individual />
-							</#if>
+								<#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
+								<#if ! (title.statements)?has_content>
+									<@p.mostSpecificTypes individual />
+								</#if>
+							</section>
 						</section>
-					</section>
+					</div>
 				</div>
-			</div>
-			<div class="row person-details">
-				<div class="col-md-12">
-					<!-- Positions -->
-					<#include "individual-positions.ftl">
-					<!-- Research Areas -->
-					<#include "individual-researchAreas.ftl">
+				<div class="row person-details">
+					<div class="col-md-12">
+						<!-- Positions -->
+						<#include "individual-positions.ftl">
+						<!-- Research Areas -->
+						<#include "individual-researchAreas.ftl">
+					</div>
 				</div>
 			</div>
 		</div>
+	</span>
+	<div class="col-md-3">
+		<#include "individual-visualizationFoafPerson.ftl">
+
+		<!-- Contact Info -->
+		<#include "individual-contactInfo.ftl">
+
+		<!-- Websites -->
+		<#include "individual-webpage.ftl">
 	</div>
-</span></section>
+</section>
 
 <section itemscope itemtype="http://schema.org/Person" id="individual-intro" class="vcard person" role="region">
     <section id="individual-info" ${infoClass!} role="region">
@@ -134,17 +145,8 @@
 </#if>
 
 <div class="row">
-	<div id="property-tabs" class="col-md-8">
+	<div id="property-tabs" class="col-md-12">
 		<#include "individual-property-group-tabs.ftl">
-	</div>
-	<div class="col-md-4">
-		<#include "individual-visualizationFoafPerson.ftl">
-
-		<!-- Contact Info -->
-		<#include "individual-contactInfo.ftl">
-
-		<!-- Websites -->
-		<#include "individual-webpage.ftl">
 	</div>
 </div>
 
