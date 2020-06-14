@@ -33,16 +33,19 @@
         <#include "developer.ftl">
         <#include "menu.ftl">
         <#include "message.ftl">
+
+
         <div class="row hero">
-            <div class="theme-showcase">
+            <#--  <div class="theme-showcase">  -->
                 <div class="col-md-12">
                     <div class="container" role="main">
                         <div class="jumbotron">
-                            <h1>${i18n().intro_title}</h1>
+                            <h1 class="h1-home display-2">${i18n().intro_title}</h1>
                         </div>
-                        <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" class="form-horizontal">
-                            <fieldset>
-                                <div class="form-group pull-left" style="margin-right: 5px;">
+
+                        <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" class="form-horizontal form-row">
+                            <#--  <fieldset class="form-row">  -->
+                                <div class="form-group col-md-2">
                                     <select class="form-control" id="classgroup" name="classgroup">
                                         <option value="">${i18n().all_capitalized}</option>
                                         <#list vClassGroups as group>
@@ -52,17 +55,15 @@
                                         </#list>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" name="querytext" class="form-control" value="" placeholder="${i18n().search_form}" autocapitalize="off" />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">
-                                                <span class="icon-search">${i18n().search_button}</span>
-                                            </button>
-                                        </span>
-                                    </div>
+                                <div class="form-group col-md-8">
+                                    <input type="text" name="querytext" class="form-control" value="" placeholder="${i18n().search_form}" autocapitalize="off" />
                                 </div>
-                            </fieldset>
+                                <div class="form-group col-md-1">
+                                    <button class="btn btn-outline-success" type="submit">
+                                        <span class="icon-search">${i18n().search_button}</span>
+                                    </button>
+                                </div>
+                            <#--  </fieldset>  -->
                         </form>
                     </div>
                 </div>
@@ -74,22 +75,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <#--  </div>  -->
         </div>
 
         <div class="row faculty-home">
             <div class="container">
-                <div class="col-md-4">
-                    <!-- List of research classes: e.g., articles, books, collections, conference papers -->
-                    <@lh.researchClasses />
-                </div>
-                <div class="col-md-4">
-                    <!-- List of four randomly selected faculty members -->
-                    <@lh.facultyMbrHtml />
-                </div>
-                <div class="col-md-4">
-                    <!-- List of randomly selected academic departments -->
-                    <@lh.academicDeptsHtml />
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- List of research classes: e.g., articles, books, collections, conference papers -->
+                        <@lh.researchClasses />
+                    </div>
+                    <div class="col-md-4">
+                        <!-- List of four randomly selected faculty members -->
+                        <@lh.facultyMbrHtml />
+                    </div>
+                    <div class="col-md-4">
+                        <!-- List of randomly selected academic departments -->
+                        <@lh.academicDeptsHtml />
+                    </div>
                 </div>
             </div>
         </div>

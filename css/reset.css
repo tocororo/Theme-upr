@@ -54,16 +54,16 @@ td {
     /* font-weight: inherit;
     font-style: inherit; */
     font-size: 100%;
-    /* font-family: "Noto Sans", "Lucida Sans Unicode","Lucida Grande", Geneva, helvetica, sans-serif; */
-    font-family: "Myriad Pro";
+    font-family: "Noto Sans", "Lucida Sans Unicode","Lucida Grande", Geneva, helvetica, sans-serif;
+    /* font-family: "Myriad Pro";
     font-style: normal;
     font-weight: normal;
     src: local('Myriad Pro Regular'),
     url('../fonts/MyriadPro-Regular.woff') format('woff'),
-    url('../fonts/MyriadPro-Regular.otf') format('otf');
+    url('../fonts/MyriadPro-Regular.otf') format('otf'); */
 
     vertical-align: baseline;
-    color: #747272;
+    /* color: #747272; */
     font-weight: normal;
 }
 body {
@@ -100,6 +100,10 @@ table {
 /* New ones added to the default list */
 a {
     text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: rgb(0, 121, 63);
 }
 fieldset {
     border-style: none;
