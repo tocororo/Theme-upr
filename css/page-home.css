@@ -31,9 +31,10 @@
     border-bottom: 1px solid rgba(220,228,227,.42); /* stroke */
     /* background-color: #395d7f; /* layer fill content */
     border-radius: 3px;
-    background-color: rgb(0, 121, 63);
-    border-bottom: 2px solid rgb(0, 70, 37);
-    color: #fff;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(54, 52, 54);
+    color: #000;
+    font-size: 22px;
     margin-left: 0px;
 }
 #home-stats {
@@ -189,4 +190,15 @@ div.faculty-home {
 .display-4 {
     font-size: 2rem;
     line-height: 1.2;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #747272;
+    border-color: #747272;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: rgb(54,52,54);
+    border-color: rgb(54,52,54);
 }

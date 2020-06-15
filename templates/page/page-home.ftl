@@ -59,7 +59,7 @@
                                     <input type="text" name="querytext" class="form-control" value="" placeholder="${i18n().search_form}" autocapitalize="off" />
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <button class="btn btn-outline-success" type="submit">
+                                    <button class="btn btn-secondary" type="submit">
                                         <span class="icon-search">${i18n().search_button}</span>
                                     </button>
                                 </div>
