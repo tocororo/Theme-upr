@@ -1,7 +1,7 @@
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 
 <div id="nav-wrapper">
-    <div id="nav">
+    <div id="nav" class="shadow">
         <div class="container">
 
             <nav class="navbar navbar-expand-xl navbar-light bg-light">

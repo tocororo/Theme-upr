@@ -35,12 +35,12 @@
         <#include "message.ftl">
 
 
-        <div class="row hero">
+        <div class="hero">
             <#--  <div class="theme-showcase">  -->
                 <div class="col-md-12">
                     <div class="container" role="main">
                         <div class="jumbotron">
-                            <h1 class="h1-home display-2">${i18n().intro_title}</h1>
+                            <h1 class="h1-home display-3">${i18n().intro_title}</h1>
                         </div>
 
                         <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" class="form-horizontal form-row">
@@ -78,7 +78,7 @@
             <#--  </div>  -->
         </div>
 
-        <div class="row faculty-home">
+        <div class="faculty-home">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -98,7 +98,7 @@
         </div>
 
         <#if geoFocusMapsEnabled >
-            <div class="row geo-focus">
+            <div class="geo-focus">
                 <div class="container">
                     <div class="col-md-12">
                         <!-- Map display of researchers' areas of geographic focus. Must be enabled in runtime.properties -->
@@ -109,7 +109,7 @@
         </#if>
 
         <!-- List of research classes: e.g., articles, books, collections, conference papers -->
-        <div class="row research-count">
+        <div class="research-count">
             <div class="container">
                 <!-- div class="col-md-6">
                 </div -->

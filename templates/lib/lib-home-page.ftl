@@ -154,7 +154,7 @@
 <#macro academicDeptsHtml>
     <section id="home-academic-depts" class="card bg-light mb-4">
         <h4 class="card-header display-4">${i18n().departments}</h4>
-        <div id="academic-depts" class="card-body">
+        <div id="academic-depts" class="card-body mt-3">
         </div>
     </section>
 </#macro>

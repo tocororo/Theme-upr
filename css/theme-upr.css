@@ -78,7 +78,7 @@ header{
 }
 
 #wrapper-content {
-    background: none repeat scroll 0 0 #fff;
+    /* background: none repeat scroll 0 0 #fff; */
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -225,16 +225,15 @@ input.search-vivo {
 
 /* FOOTER------>  */
 footer {
-    height: 88px;
     margin: 0 auto;
     font-size: .7em;
     color: white;
     background-color: black;
 }
 footer .row {
-    background-color: black;
+    background-color: transparent;
 }
-footer p.copyright {
+/* footer p.copyright {
     float: left;
     padding-top: 55px;
     color: white;
@@ -279,7 +278,7 @@ a.powered-by-vivo:hover {
 }
 #footer-nav p {
     margin-bottom: 1.3em;
-}
+} */
 /* BRANDING ------>  */
 h1.vivo-logo {
     position: absolute;
