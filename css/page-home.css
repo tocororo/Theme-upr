@@ -11,6 +11,7 @@
 
 .hero {
     background: rgb(0, 121, 63) url(../images/hero-background.jpg) repeat-x 0 0;
+    background-size: cover;
 }
 
 .hero form input,
@@ -20,33 +21,38 @@
     margin-right: 0em;
     margin-left: 0em;
 }
+.hero form input{
+    height: auto;
+}
 
-.home-sections {
-    border-top: 1px dotted rgb(217, 228, 222); /* stroke */
-    border-bottom: 1px dotted rgb(217, 228, 222); /* stroke */
-    background-color: #fff; /* layer fill content */
+
+/* .home-sections {
+    border-top: 1px dotted rgb(217, 228, 222); 
+    border-bottom: 1px dotted rgb(217, 228, 222); 
+    background-color: #fff;
 }
 .home-sections h4 {
-    border-top: 1px solid #dce4e36b; /* stroke */
-    border-bottom: 1px solid rgba(220,228,227,.42); /* stroke */
-    /* background-color: #395d7f; /* layer fill content */
+    border-top: 1px solid #dce4e36b; 
+    border-bottom: 1px solid rgba(220,228,227,.42); 
+    /* background-color: #395d7f;
     border-radius: 3px;
     background-color: transparent;
     border-bottom: 2px solid rgb(54, 52, 54);
     color: #000;
     font-size: 22px;
     margin-left: 0px;
-}
+} */
+
 #home-stats {
     margin-top: 30px !important;
     display: flex !important;
-    align-items: center;
-    flex-direction: column;
+    /* align-items: center;
+    flex-direction: column; */
 }
 #stats{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    display: flex !important;
+    width: auto;
+    height: auto;
 }
 #stats li {
     -moz-border-radius: 6px;
@@ -61,6 +67,9 @@
 #stats li a:hover {
     opacity: .5;
 }
+#stats li:first-child {
+    margin-left: 0px;
+}
 #stats .stats-count span {
     color: #fff;
     opacity: .5;
@@ -68,13 +77,14 @@
 #stats p {
     color: #fff;
 }
-#home-research  {
+/* #home-research  {
     width: 297px;
     float: left;
     clear: both;
-}
+} */
 #home-research ul {
     padding: 0.7em 0 0.6em 0.75em;
+    margin-top: 2em;
 }
 #home-research li {
     line-height: 1.25em;
@@ -95,7 +105,7 @@
     margin-left: 4px;
     text-align: center;
 }
-#home-academic-depts  {
+/* #home-academic-depts  {
     width: 297px;
     margin-left: 15px;
     float: left;
@@ -115,12 +125,12 @@
     line-height: 1.25em;
     padding-top: 1.0em;
     padding-right: 4px;
-}
-#home-faculty-mbrs  {
+} */
+/* #home-faculty-mbrs  {
     width: 297px;
     margin: 0 0 20px 15px;
     float: left;
-}
+} */
 div#tempSpacing {
     margin-top:30px;
     padding-left:20px;
