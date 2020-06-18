@@ -2,18 +2,22 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h1 class="vivo-logo">
-                <a title="${i18n().identity_title}" href="${urls.home}">
-                    <span class="displace">${siteName}</span>
+		<#--  <div class="col-md-12">  -->
+			<div class="col">
+			<#--  <h1 class="vivo-logo">  -->
+                <a title="${i18n().identity_title}" href="${urls.home}" class="d-flex align-items-center">
+                    <img src="${urls.base}/themes/theme-upr/images/VIVO-logo.png" width="170" alt="${i18n().identity_title}" />
+					<#--  <span class="displace">${siteName}</span>  -->
+					<img src="${urls.base}/themes/theme-upr/images/logo-upr-white.png" width="170"/>
                 </a>
-            </h1>
+            <#--  </h1>  -->
+			</div>
 			<#-- Since we are using a graphic text for the tagline, we won't render ${siteTagline}
 			<#if siteTagline?has_content>
 				<em>${siteTagline}</em>
 			</#if>-->
 
-			<nav role="navigation">
+			<nav role="navigation" class="col-md-5">
 				<ul id="header-nav" role="list">
 					<#include "languageSelector.ftl">
 					<li role="listitem"><a href="${urls.index}" title="${i18n().identity_index}">${i18n().identity_index}</a></li>
@@ -54,6 +58,6 @@
 					</#if>
 				</ul>
 			</nav>
-		</div>
+		<#--  </div>  -->
 	</div>
 </div>

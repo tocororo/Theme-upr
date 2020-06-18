@@ -2,16 +2,29 @@
 <div class="card bg-secondary rounded-0 py-2">
     <div class="container">
         <div class="row card-body text-white bg-transparent">
-            <div class="col-md-4">col-sm4</div>
-            <div class="col-md-4">col-sm4</div>
-            <div class="col-md-4">col-sm4</div>
+            <div class="col-md-3">
+                <#--  <img src="/../../images/LOGO-CRAI.png" class="rounded float-left" alt="CRAI">  -->
+                <img src="${urls.base}/themes/theme-upr/images/LOGO-CRAI.png" class="rounded float-left"  width="170" alt="CRAI"/>
+            </div>
+            <div class="col-md-4">
+                <h4 class="h4">${i18n().menu_contactus}</h4>
+                <p> <strong> ${i18n().footer_address}</strong>: ${i18n().footer_address_value} </p>
+                <p> <strong> ${i18n().footer_postal_code}</strong>: 20100</p>
+                <p> <strong> ${i18n().footer_email}</strong>: <a class="text-white" href="mailto:biblioteca@upr.edu.cu">biblioteca@upr.edu.cu</a> </p>
+            </div>
+            <div class="col-md-5">
+                <h4 class="h4">${i18n().footer_extra_link}</h4>
+                <p> <a class="text-white" href="http://www.upr.edu.cu">Universidad de Pinar del Río</a> </p>
+                <p> <a class="text-white" href="https://crai.upr.edu.cu">Centro de Recursos para el Aprendizaje y la Investigación</a> </p>
+                <p> <a class="text-white" href="http://sceiba-lab.upr.edu.cu">Sceiba</a> </p>
+            </div>
         </div>
     </div>
 </div>
 <footer role="contentinfo">
         <div class="container">
             <div class="row text-white">
-                <div class="col-sm-8 my-2 text-center">
+                <div class="col-sm-6 my-2 text-center">
 
                     <#if copyright??>
                         &copy;${copyright.year?c}
@@ -30,7 +43,7 @@
                     </#if>
 
                 </div>
-                <div class="col-sm-4 my-2 text-center">
+                <div class="col-sm-6 my-2 text-center">
                     <a class="border-right text-white px-2" href="${urls.about}" title="${i18n().menu_about}">${i18n().menu_about}</a>
                     <#if urls.contact??>
                         <a class="border-right text-white px-2" href="${urls.contact}" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a>
